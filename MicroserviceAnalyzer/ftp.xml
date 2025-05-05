@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.2.15 Chrome/134.0.6998.205 Electron/35.2.1 Safari/537.36" version="26.2.15">
+  <diagram name="Flow Diagram" id="41d48b67a22e4952aeb975c2">
+    <mxGraphModel dx="1106" dy="783" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="project_swimlane_id" value="BaseFileUploadService" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;startSize=30;" parent="1" vertex="1">
+          <mxGeometry x="40" y="-60" width="250" height="1400" as="geometry" />
+        </mxCell>
+        <mxCell id="database_swimlane" value="Database" style="swimlane;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#333333;startSize=30;" parent="1" vertex="1">
+          <mxGeometry x="310" y="-60" width="250" height="1400" as="geometry" />
+        </mxCell>
+        <mxCell id="fb879f4b" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=1 4;strokeWidth=2;" edge="1" parent="1" source="9a6c9a23-f169-4d6e-bc74-dee2124480a6" target="344efe96-d298-4f85-a4fc-e77101b41458">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="86cd7786" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="344efe96-d298-4f85-a4fc-e77101b41458" target="1e801522-c378-4dc5-bb62-5474a98155db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="466bcdf7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="1e801522-c378-4dc5-bb62-5474a98155db" target="93eb8fce-bfe9-4719-8e92-bb69fc4cfd0a">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f4d57e16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="93eb8fce-bfe9-4719-8e92-bb69fc4cfd0a" target="9a059b59-61e8-46d8-a6a9-4d590b3d857c">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cbca7b77" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="9a059b59-61e8-46d8-a6a9-4d590b3d857c" target="20f8d775-28e5-4569-9e19-73ff9dbf8fec">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cb0d7884" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="20f8d775-28e5-4569-9e19-73ff9dbf8fec" target="11206d0e-bf86-445e-ac9b-6a4e8b32f33e">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cf579d28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#0066CC;dashed=1;endArrow=block;endFill=1;" edge="1" parent="1" source="11206d0e-bf86-445e-ac9b-6a4e8b32f33e" target="359d613b-c2d4-497e-9e50-1a88b537b5b0">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="846d2d01" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;strokeColor=#0066CC;dashed=1;endArrow=block;endFill=1;" edge="1" parent="1" source="359d613b-c2d4-497e-9e50-1a88b537b5b0" target="fe80c4c2-2844-4e41-bb43-e6a662adb44a">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="545e93bb" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=1 4;strokeWidth=2;" edge="1" parent="1" source="fe80c4c2-2844-4e41-bb43-e6a662adb44a" target="5a748d2e-564c-439f-9b86-7296df6177e5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8c3aa0b6" value="Exception" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="1e801522-c378-4dc5-bb62-5474a98155db" target="c31b29bd-8117-4df2-881c-dde59988d056">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c86e2231" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="c31b29bd-8117-4df2-881c-dde59988d056" target="a7146b74-fd12-4a45-9bc6-042b44f8e038">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="96147375" value="Propagate" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="a7146b74-fd12-4a45-9bc6-042b44f8e038" target="79decd5c-2000-4868-98d5-d5db466631c9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fb073b3d" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="344efe96-d298-4f85-a4fc-e77101b41458" target="79decd5c-2000-4868-98d5-d5db466631c9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9a6c9a23-f169-4d6e-bc74-dee2124480a6" value="BaseFileUploadService.GetFileFtp" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" vertex="1" parent="project_swimlane_id">
+          <mxGeometry x="65" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="79decd5c-2000-4868-98d5-d5db466631c9" value="End" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" vertex="1" parent="project_swimlane_id">
+          <mxGeometry x="65" y="1300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="344efe96-d298-4f85-a4fc-e77101b41458" value="GetType" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="project_swimlane_id">
+          <mxGeometry x="65" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1e801522-c378-4dc5-bb62-5474a98155db" value="Try Block" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="project_swimlane_id">
+          <mxGeometry x="65" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="93eb8fce-bfe9-4719-8e92-bb69fc4cfd0a" value="GetFileType" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="project_swimlane_id">
+          <mxGeometry x="65" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9a059b59-61e8-46d8-a6a9-4d590b3d857c" value="GetFileFromFtp" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="project_swimlane_id">
+          <mxGeometry x="65" y="500" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="20f8d775-28e5-4569-9e19-73ff9dbf8fec" value="DateTime.UtcNow.ToString" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="project_swimlane_id">
+          <mxGeometry x="65" y="600" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="11206d0e-bf86-445e-ac9b-6a4e8b32f33e" value="_simpleStorageService.UploadFileAsync" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="project_swimlane_id">
+          <mxGeometry x="65" y="700" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5a748d2e-564c-439f-9b86-7296df6177e5" value="SendQueueFileUpload" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="project_swimlane_id">
+          <mxGeometry x="65" y="1000" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c31b29bd-8117-4df2-881c-dde59988d056" value="Catch System.Exception" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="project_swimlane_id">
+          <mxGeometry x="65" y="1100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a7146b74-fd12-4a45-9bc6-042b44f8e038" value="Throw Rethrow" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="project_swimlane_id">
+          <mxGeometry x="65" y="1200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="359d613b-c2d4-497e-9e50-1a88b537b5b0" value="_authUserMeEntity.SaveAsync (authMe, default)" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" vertex="1" parent="database_swimlane">
+          <mxGeometry x="65" y="800" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fe80c4c2-2844-4e41-bb43-e6a662adb44a" value="_historyFileUploadEntity.SaveAsync (historyFile, default)" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" vertex="1" parent="database_swimlane">
+          <mxGeometry x="65" y="900" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
