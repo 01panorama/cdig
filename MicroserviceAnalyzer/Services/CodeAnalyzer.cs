@@ -124,12 +124,8 @@ public class CodeAnalyzer
             string projectName = Path.GetFileNameWithoutExtension(projectFile);
             string projectDir = Path.GetDirectoryName(projectFile) ?? string.Empty;
             
-            // Heuristic: if the project name ends with "Service" or "API", it's likely a microservice
-            if (projectName.EndsWith("Service") || projectName.EndsWith("API") || 
-                projectName.EndsWith("Microservice") || projectName.EndsWith("Api"))
-            {
-                _microserviceMap[projectDir] = projectName;
-            }
+            // Map all projects found, not just ones with specific suffixes
+            _microserviceMap[projectDir] = projectName;
         }
     }
 
