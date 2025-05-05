@@ -2,9 +2,16 @@ namespace MicroserviceAnalyzer.Models;
 
 public class DiagramConnection
 {
-    public string Id { get; set; } = Guid.NewGuid().ToString();
-    public string SourceNodeId { get; set; } = string.Empty;
-    public string TargetNodeId { get; set; } = string.Empty;
-    public string Label { get; set; } = string.Empty;
-    public string Style { get; set; } = "edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;";
+    private static int _nextId = 1;
+    
+    public DiagramConnection()
+    {
+        Id = _nextId++;
+    }
+    
+    public int Id { get; set; }
+    public int SourceNodeId { get; set; }
+    public int TargetNodeId { get; set; }
+    public string? Label { get; set; }
+    public string? Style { get; set; }
 } 

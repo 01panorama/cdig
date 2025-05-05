@@ -179,25 +179,29 @@ public class CodeAnalyzer
             {
                 Console.WriteLine($"Found if statement with condition: {ifStatement.Condition}");
                 
-                // Create a decision node for the if statement
+                // Create a decision node for the if statement with more distinctive formatting
                 var conditionNode = new DiagramNode
                 {
-                    Label = "If " + GetConditionText(ifStatement.Condition),
+                    Label = "If: " + GetConditionText(ifStatement.Condition),
                     Type = NodeType.Decision,
                     X = xPos,
                     Y = yOffset,
-                    Width = 100,
-                    Height = 100,
+                    Width = 200, // Make wider for better visibility
+                    Height = 120, // Make taller for better visibility
                     MicroserviceName = sourceNode.MicroserviceName
                 };
                 
+                // Log this for debugging
+                Console.WriteLine($"*** Created Decision Node: {conditionNode.Id} - {conditionNode.Label}");
+                
                 nodes.Add(conditionNode);
                 
-                // Connect source to condition
+                // Connect source to condition with a clear label
                 connections.Add(new DiagramConnection
                 {
                     SourceNodeId = lastNode.Id,
-                    TargetNodeId = conditionNode.Id
+                    TargetNodeId = conditionNode.Id,
+                    Label = "Decision"
                 });
                 
                 lastNode = conditionNode;
@@ -218,7 +222,7 @@ public class CodeAnalyzer
                     {
                         Label = "Return (Early Exit)",
                         Type = NodeType.Process,
-                        X = xPos + 150,
+                        X = xPos + 200, // Position further to the right for clarity
                         Y = yOffset + 150,
                         MicroserviceName = sourceNode.MicroserviceName
                     };
@@ -229,7 +233,7 @@ public class CodeAnalyzer
                     {
                         SourceNodeId = conditionNode.Id,
                         TargetNodeId = returnNode.Id,
-                        Label = "true"
+                        Label = "True (Exit)"
                     });
                     
                     // Continue to the next statement after the if
@@ -301,7 +305,7 @@ public class CodeAnalyzer
                     {
                         SourceNodeId = conditionNode.Id,
                         TargetNodeId = returnNode.Id,
-                        Label = "true"
+                        Label = "TRUE"
                     });
                     
                     // If there are no important operations in this branch, we can skip further processing
@@ -330,7 +334,7 @@ public class CodeAnalyzer
                 {
                     SourceNodeId = conditionNode.Id,
                     TargetNodeId = trueBranchNode.Id,
-                    Label = "true"
+                    Label = "TRUE"
                 });
                 
                 // Process statements in the true branch
@@ -461,7 +465,7 @@ public class CodeAnalyzer
                     {
                         SourceNodeId = conditionNode.Id,
                         TargetNodeId = falseBranchNode.Id,
-                        Label = "false"
+                        Label = "FALSE"
                     });
                     
                     // Process statements in the false branch

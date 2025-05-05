@@ -3,6 +3,7 @@ using System;
 using System.IO;
 using System.Threading.Tasks;
 using Microsoft.CodeAnalysis.CSharp;
+using System.Linq;
 
 namespace MicroserviceAnalyzer;
 
@@ -16,19 +17,7 @@ public class Program
         // Check for test commands
         if (args.Length > 0)
         {
-            if (args[0].Equals("test", StringComparison.OrdinalIgnoreCase))
-            {
-                string testOutputPath = args.Length > 1 ? args[1] : "test_diagram.drawio.xml";
-                SampleTest.CreateSampleDiagram(testOutputPath);
-                return;
-            }
-            else if (args[0].Equals("simple", StringComparison.OrdinalIgnoreCase))
-            {
-                string simpleOutputPath = args.Length > 1 ? args[1] : "simple_diagram.drawio.xml";
-                TestSimple.CreateSimpleDiagram(simpleOutputPath);
-                return;
-            }
-            else if (args[0].Equals("iftest", StringComparison.OrdinalIgnoreCase))
+            if (args[0].Equals("iftest", StringComparison.OrdinalIgnoreCase))
             {
                 Console.WriteLine("Running if statement detection test");
                 
@@ -93,8 +82,7 @@ public class Program
             Console.WriteLine("  output_file: (Optional) Path to save the draw.io XML file (default: flow_diagram.drawio.xml)");
             Console.WriteLine("");
             Console.WriteLine("For testing:");
-            Console.WriteLine("  dotnet run test [output_file]  - Run with sample diagram");
-            Console.WriteLine("  dotnet run simple [output_file] - Run with simple diagram (minimal format)");
+            Console.WriteLine("  dotnet run iftest - Run test for if statement detection");
             return;
         }
 

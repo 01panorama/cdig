@@ -1,33 +1,44 @@
-namespace MicroserviceAnalyzer.Models;
+using System;
 
-public class DiagramNode
-{
-    public string Id { get; set; } = Guid.NewGuid().ToString();
-    public string Label { get; set; } = string.Empty;
-    public NodeType Type { get; set; }
-    public int X { get; set; }
-    public int Y { get; set; }
-    public int Width { get; set; } = 120;
-    public int Height { get; set; } = 60;
-    public string Style { get; set; } = string.Empty;
-    public string OriginalMethodName { get; set; } = string.Empty;
-    public string OriginalClassName { get; set; } = string.Empty;
-    public string MicroserviceName { get; set; } = string.Empty;
-    public string EndpointUrl { get; set; } = string.Empty;
-    public string HttpMethod { get; set; } = string.Empty;
-}
+namespace MicroserviceAnalyzer.Models;
 
 public enum NodeType
 {
     Start,
-    End,
     Process,
     Decision,
-    DatabaseOperation,
-    ExternalService,
-    Controller,
+    End,
     ApiCall,
-    MessageQueue,
+    DatabaseOperation,
     EventPublish,
     EventSubscribe
+}
+
+public class DiagramNode
+{
+    private static int _nextId = 1;
+    
+    public DiagramNode()
+    {
+        Id = _nextId++;
+        Width = 100;
+        Height = 60;
+        BackgroundColor = "transparent"; // Ensure transparent background
+    }
+    
+    public int Id { get; set; }
+    public string Label { get; set; } = string.Empty;
+    public NodeType Type { get; set; }
+    public int X { get; set; }
+    public int Y { get; set; }
+    public int Width { get; set; }
+    public int Height { get; set; }
+    public string BackgroundColor { get; set; }
+    public string MicroserviceName { get; set; } = string.Empty;
+    public string OriginalClassName { get; set; } = string.Empty;
+    public string OriginalMethodName { get; set; } = string.Empty;
+    public string EndpointUrl { get; set; } = string.Empty;
+    public string HttpMethod { get; set; } = string.Empty;
+    
+    public bool IsDecision => Type == NodeType.Decision;
 } 
